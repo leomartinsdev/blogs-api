@@ -1,8 +1,9 @@
-const jwt = require('jsonwebtoken');
+// const jwt = require('jsonwebtoken');
 const mapStatusHTTP = require('../utils/mapStatusHTTP');
+const createToken = require('../utils/tokenCreation');
 const { loginService } = require('../services');
 
-const secret = process.env.JWT_SECRET || 'secretPass';
+// const secret = process.env.JWT_SECRET || 'secretPass';
 
 const findUser = async (req, res) => {
   try {
@@ -12,15 +13,16 @@ const findUser = async (req, res) => {
       return res.status(mapStatusHTTP(status)).json(data);
     }
 
-    console.log(status);
     const userId = data.id;
 
-    const jwtConfig = {
-      expiresIn: '7d',
-      algorithm: 'HS256',
-    };
+    // const jwtConfig = {
+    //   expiresIn: '7d',
+    //   algorithm: 'HS256',
+    // };
 
-    const token = jwt.sign({ data: { userId } }, secret, jwtConfig);
+    // const token = jwt.sign({ data: { userId } }, secret, jwtConfig);
+
+    const token = createToken(userId);
 
     return res.status(mapStatusHTTP(status)).json({ token });
   } catch (e) {
