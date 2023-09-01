@@ -19,7 +19,6 @@ const findOne = async (id) => {
   const user = await User.findByPk(id, {
     attributes: { exclude: ['password'] },
   });
-  console.log('-->RETRIVED USER:', user);
 
   if (!user) {
     return { status: 'NOT_FOUND', data: { message: 'User does not exist' } };
@@ -28,8 +27,6 @@ const findOne = async (id) => {
 };
 
 const insertUser = async (displayName, email, password, image) => {
-  console.log('----- INICIO DO SERVICE -----');
-
   const userExists = await checkUserExistence(email);
   if (userExists) return { status: userExists.status, data: { message: userExists.message } };
 
