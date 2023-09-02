@@ -1,4 +1,3 @@
-// const jwt = require('jsonwebtoken');
 const mapStatusHTTP = require('../utils/mapStatusHTTP');
 const createToken = require('../utils/tokenCreation');
 const { loginService } = require('../services');

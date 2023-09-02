@@ -15,9 +15,7 @@ const findAll = async (_req, res) => {
 const findOne = async (req, res) => {
   try {
     const { id } = req.params;
-    console.log(' --> ID CONTROL:', id);
     const { status, data } = await userService.findOne(id);
-    console.log('--> DATA CONTROL:', data);
     return res.status(mapStatusHTTP(status)).json(data);
   } catch (e) {
     res.status(mapStatusHTTP('NOT_FOUND')).json({ message: 'Failed to retrive user' });
