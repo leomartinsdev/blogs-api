@@ -1,5 +1,5 @@
 # Blogs API ✍️📰
-Aplicação back-end no formato de uma RESTful API com CRUD para a produção de conteúdos de um blog.
+Aplicação back-end no formato de uma RESTful API de um CRUD para a produção de conteúdos de um blog.
 <br><br>
 O aplicativo foi desenvolvido utilizando Node.js, Express como framework para Node.js, Sequelize (ORM) e MySQL para gerenciamento do banco de dados e JWT para criação e validação de tokens. O projeto também foi dockerizado para que seja fácil executa-lo de qualquer máquina.
 <br><br>
