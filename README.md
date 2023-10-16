@@ -20,7 +20,6 @@ O aplicativo foi desenvolvido utilizando Node.js, Express como framework para No
 -  Também no terminal, inicie os containers: `docker-compose up -d --build`
 -  Entre no terminal do container: `docker exec -it -blogs_api bash`
 -  No terminal do container: `npm install`
--  Dentro do container, execute: `npm run prestart && npm run seed && npm run dev`
 
 2) Sem Docker:
 -  Instale as dependêncais via termina: `npm install`
