@@ -19,7 +19,7 @@ O aplicativo foi desenvolvido utilizando Node.js, Express como framework para No
 -  Instale as dependências via terminal: `npm install` (esse passo não é estritamente necessário, mas recomendado para evitar possíveis problemas)
 -  Também no terminal, inicie os containers: `docker-compose up -d --build`
 -  Entre no terminal do container: `docker exec -it -blogs_api bash`
--  No terminal do container: `npm install`
+-  No terminal do container: `npm run dev`
 
 2) Sem Docker:
 -  Instale as dependêncais via termina: `npm install`
